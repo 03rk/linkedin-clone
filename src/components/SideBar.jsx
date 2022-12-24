@@ -1,15 +1,20 @@
 import { Avatar } from '@mui/material';
 import React from 'react';
+import { useSelector } from 'react-redux';
 import '../css/sidebar.css'
+import { selectUser } from '../features/userSlice';
+import GroupsIcon from '@mui/icons-material/Groups';
 const SideBar = () => {
+    const user = useSelector(selectUser)
+
     return (
         <div className='sidebar'>
             <div className='sidebar__profile'>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6-P44K_19K0xlWaOcd3_-DFaJIh8drGP_nvN_sMCI&s" alt="" />
                 <div className='profile__details'>
-                    <Avatar/>
-                    <h4>Rahul Kumar</h4>
-                    <p>Web Developers</p>
+                    <Avatar src={user.photoURL}/>
+                    <h4>{user.displayName}</h4>
+                    <p>Web Developer</p>
                 </div>
 
                 <div className='profile__stats'>
@@ -30,7 +35,13 @@ const SideBar = () => {
                 <p className='hash'><span>#</span>react</p>
                 <p className='hash'><span>#</span> digital marketing</p>
                 <p className='hash'><span>#</span>social media</p>
+                <br />
+                <h5 style={{color :"#277BC0"}}>Groups</h5>
+                <p className='hash'><span><GroupsIcon/></span>redux</p>
+                <p className='hash'><span><GroupsIcon/></span>react</p>
             </div>
+
+           
         </div>
     );
 };
