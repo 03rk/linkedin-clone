@@ -1,11 +1,15 @@
 
-*{
+/* *{
     background-color: white;
-}
+} */
 .loginscreen{
     width: 400px;
     margin: 100px auto;
+    height: 400px;
     text-align: center;
+    background-color: white;
+    border-radius: 10px;
+
 }
 
 .loginscreen img{
@@ -16,16 +20,17 @@
 .loginscreen input{
     display: flex;
     height: 40px;
-    width: 100%;
+    width: 90%;
     margin-bottom: 10px;
     padding: 0 10px;
     border: 2px solid #000;
     border-radius: 5px;
     box-sizing: border-box;
+    margin-left: 20px;
 }
 .loginscreen button{
     border-radius: 0;
-    width: 100%;
+    width: 90%;
     height: 40px;
     background-color: #0077b5;
     text-align: center;
