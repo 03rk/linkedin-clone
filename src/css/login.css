@@ -1,4 +1,7 @@
 
+*{
+    background-color: white;
+}
 .loginscreen{
     width: 400px;
     margin: 100px auto;
